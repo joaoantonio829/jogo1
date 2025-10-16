@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitória!</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body class="vitoria">
+  <div class="win-image"></div>
+  
+  <div class="conteiner">
+    <div class="row">
+        <div class="d-flex justify-content-center">
+            <img src="IMG/survived.png" class="win" alt="Vitória">
+        </div>
+    </div>
+    <div class="row">
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-dark btn-lg" onclick="window.location.href='Hub.html'">Reiniciar</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="Kils">
+            Pontos: <span id="pontuacao"></span>
+        </div>
+    </div>
+  </div>
+
+  <script>
+      document.getElementById('pontuacao').innerHTML = localStorage.getItem('ponts') || 0;
+  </script>
+</body>
+</html>

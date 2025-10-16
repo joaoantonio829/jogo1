@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Mata Morcego</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script>
+        function iniciarJogo() {
+            var nivel = document.getElementById('nivel').value;
+
+            if (nivel === '') {
+                alert('Selecione um nível para iniciar o jogo');
+                return false;
+            }
+
+            localStorage.setItem('nivelJogo', nivel);
+            window.location.href = "app.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="d-flex justify-content-center">
+                <img src="IMG/LOB-PRINCIPAL.png" class="HUB" alt="Tela inicial">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <img class="lob-text" src="IMG/LOB-TEXT2.png" alt="Logo do jogo">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <select class="form-control" id="nivel" style="width: 250px;">
+                        <option value="">-- Selecione o nível --</option>
+                        <option value="normal">Normal</option>
+                        <option value="dificil">Difícil</option>
+                        <option value="chucknorris">Chuck Norris</option>
+                    </select>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Start Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

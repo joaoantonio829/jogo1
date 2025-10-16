@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kill the bat</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/Game.js"></script>
+</head>
+<body onresize="ajustaTamanhoPalcoJogo();">
+    
+    <div class="painel-esq">
+        <div class="painel-esquerda-conteudo">
+            <div class="vidas">
+                <img id="v1" src="IMG/brain.png" alt="vida 1">
+                <img id="v2" src="IMG/brain.png" alt="vida 2">
+                <img id="v3" src="IMG/brain.png" alt="vida 3">
+            </div>
+            
+            <div class="cronometro-info">
+                <div class="cronometro">
+                    Remaining time: <span id="cronometro"></span>
+                </div>
+                <div class="pontuacao-wrapper">
+                    Pontos: <span id="pontuacao"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="painel-dir" onclick="recarregar()">
+        <div class="municao">
+            <img id="m1" src="IMG/bullet.png" alt="municao 1">
+            <img id="m2" src="IMG/bullet.png" alt="municao 2">
+            <img id="m3" src="IMG/bullet.png" alt="municao 3">
+            <img id="m4" src="IMG/bullet.png" alt="municao 4">
+            <img id="m5" src="IMG/bullet.png" alt="municao 5">
+            <img id="m6" src="IMG/bullet.png" alt="municao 6">
+        </div>
+    </div>
+    
+</body>
+</html>
